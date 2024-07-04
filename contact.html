@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Nourishing Minds</title>
+    <link rel="stylesheet" href="css/contact-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="#">Nourishing Minds</a></div>
+            <ul>
+                <li><a href="foodhabits.html"><i class="bi bi-house"></i>Home</a></li>
+                <li><a href="about.html"><i class="bi bi-info-circle"></i>Learned About</a></li>
+                <li><a href="myactivity.html"><i class="bi bi-activity"></i>My activity</a></li>
+                <li><a href="conclusion.html"><i class="bi bi-check2-circle"></i>Conclusion</a></li>
+                <button><a href="contact.html"><i class="bi bi-envelope"></i>Contact</a></button>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="contact-container">
+        <h1>Get in Touch</h1>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> Email: info@nourishingminds.com</li>
+                                    </ul>
+                <div class="social-media">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/sai-sreeja-nallapareddy-583369250" class="social-icon linkedin"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <form id="contactForm" class="contact-form">
+                <h2>Send us a Message</h2>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+        <div id="thankYouMessage" class="thank-you-message" style="display: none;">
+            <i class="fas fa-check-circle"></i>
+            <h2>Thank You!</h2>
+            <p>Your message has been successfully submitted. We appreciate your interest and will get back to you shortly.</p>
+            <button id="sendAnotherBtn" class="btn">Send Another Message</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section company-info">
+                <h3>Nourishing Minds</h3>
+                <p>This website is developed by student for helping people to understand more and get more awareness about Healthy Foods Habits.</p>
+            </div>
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="foodhabits.html">Home</a></li>
+                    <li><a href="about.html">Learned About</a></li>
+                    <li><a href="myactivity.html">My activity</a></li>
+                    <li><a href="conclusion.html">Conclusion</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social-media">
+                <h3>Follow Us</h3>
+                <a href="https://www.linkedin.com/in/sai-sreeja-nallapareddy-583369250?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            <p>&copy; Copyright 2024 . All rights reserved to Yasmin.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            const thankYouMessage = document.getElementById('thankYouMessage');
+            const sendAnotherBtn = document.getElementById('sendAnotherBtn');
+
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Here you would typically send the form data to a server
+                // For this example, we'll just simulate a successful submission
+
+                // Hide the form
+                contactForm.style.display = 'none';
+                
+                // Show the thank you message
+                thankYouMessage.style.display = 'block';
+
+                // Clear the form fields
+                contactForm.reset();
+            });
+
+            sendAnotherBtn.addEventListener('click', function() {
+                // Hide the thank you message
+                thankYouMessage.style.display = 'none';
+                
+                // Show the form again
+                contactForm.style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
